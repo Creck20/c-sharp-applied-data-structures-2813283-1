@@ -2,8 +2,16 @@
 // Basic data structures
 
 // TODO: strings are collections of characters, and are immutable
+string s1 = "Hello World ";
+char[] c1 = new char[] { 'F', 'i', 'z', 'z', 'y', ' ', 'B', 'u', 'z', 'z' };
+string s2 = new string(c1);
 
-// char[] c1 = new char[] {'F','i','z','z','y',' ','B','u','z','z'};
+s1 += s2;
+
+Console.WriteLine(s1);
+
+s2 = s2.ToUpper();
+Console.WriteLine(s2);
 
 
 // TODO: Be careful with string references
