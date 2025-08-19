@@ -1,4 +1,5 @@
 ﻿using System;
+// Must include this line to have acess to the generic collections classes
 using System.Collections.Generic;
 
 namespace ListExample
@@ -12,27 +13,34 @@ namespace ListExample
                                 "George Carlin", "Lenny Bruce",
                                 "Eddie Murphy", "Louie Anderson"};
             // TODO: Create the list
-
+            List<string> strList = new List<string>(10);
 
             // TODO: Add some elements to the list from an existing array
-
+            strList.AddRange(comedians);
 
             // TODO: Add individual items
+            strList.Add("Bryan Regan");
+            strList.Add("Jim Gaffigan");
 
 
             // TODO: Examine the Count and Capacity
-
+            Console.WriteLine($"Count and Capacity: {strList.Count}, {strList.Capacity}");
 
             // TODO: Enumerate the items in the list with a foreach loop
-
+            Console.WriteLine("List contents:");
+            PrintList(strList);
 
             // TODO: Access any item by its index
-
+            Console.WriteLine($"Index Four: {strList[4]}");
 
             // TODO: Remove items from the list
+            strList.RemoveAt(2);
+            strList.Remove("Bryan Regan");
 
 
             // TODO: Sort the list content
+            strList.Sort();
+            PrintList(strList);
 
 
             // ** Searching List Content **/
